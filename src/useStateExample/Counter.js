@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <p> {count} times</p>
+      <p>Value: {count}</p>
       <button onClick={() => setCount(count + 1)}>
         +
       </button>
       <button onClick={() => setCount(count - 1)}>
         -
+      </button>
+      <button onClick={() => setCount(0)}>
+        reset
       </button>
     </div>
   );

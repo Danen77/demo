@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FavoriteColor = () => {
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState();
   const handleColor = (color) => () => {
     setColor(color);
   }
   return (
     <>
-      <h1>My favorite color is {color}!</h1>
+      <h1>My favorite color is {color} {color !== "" ? '!' : '?'}</h1>
       <div>
         <button
           type="button"
@@ -25,6 +25,10 @@ const FavoriteColor = () => {
           type="button"
           onClick={() => setColor("green")}
         >Green</button>
+        <button
+          type="button"
+          onClick={() => setColor("")}
+        >Reset</button>
       </div>
     </>
   );

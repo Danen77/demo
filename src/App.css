@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+div.solid {
+  border-top: 3px solid rgb(248, 245, 245);
+  padding: 10px 0;
+}
+
+.format-json {
+  height: 400px;
+  text-align: left;
+  font-size: 12px;
+  overflow: scroll;
+}
