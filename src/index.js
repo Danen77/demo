@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { crea } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import UseStateExample from './useStateExample/UseStateExample';
+import UseReducerExample from './useReducerExample/UseReducerExample';
+import UseEffectExample from './useEffectExample/UseEffectExample';
+import User from './useContextExample/User';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <BrowserRouter>
+      
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route path="useState" element={<UseStateExample />} />
+              <Route path="useEffect" element={<UseEffectExample />} />
+              <Route path="useContext" element={<User />} />
+              <Route path="useReducer" element={<UseReducerExample />} />
+            
+            </Route>
+          </Routes>
+       
+    </BrowserRouter>
+  </React.StrictMode >
 );
 
 // ReactDOM.render(<App />, document.getElementById("root"));

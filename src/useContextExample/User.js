@@ -8,9 +8,9 @@ const User = () => {
     }
     return (
       <>
-        <h1>Component 5</h1>
-        <h2>{`Hello ${user.user} again!`}</h2>
+        <h4>{`Hello ${user.user} again!`}</h4>
         <button onClick={handleChangeUser}>Change User</button>
+        <button onClick={() => user.setUser('John Doe')}>reset</button>
       </>
     );
   }

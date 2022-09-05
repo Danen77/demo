@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -47,4 +49,8 @@ div.solid {
   text-align: left;
   font-size: 12px;
   overflow: scroll;
+}
+
+button {
+  margin-right: 3px;
 }
