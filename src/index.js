@@ -7,7 +7,6 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import UseStateExample from './useStateExample/UseStateExample';
 import UseReducerExample from './useReducerExample/UseReducerExample';
